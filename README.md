@@ -42,6 +42,26 @@ O banco foi configurado para impedir inconsistências:
 * Não é possível cadastrar um carro sem um fabricante válido (Constraint de FK).
 * A estrutura impede a exclusão acidental de categorias que possuem veículos vinculados, protegendo o histórico da frota.
 
+## ⚙️ Instruções de Execução
+
+Para garantir a integridade referencial e o funcionamento correto das chaves estrangeiras, é fundamental executar os scripts na ordem abaixo:
+
+### 1. Pré-requisitos
+Certifique-se de ter um ambiente SQL configurado. Recomendamos:
+* **VS Code** com a extensão **SQLTools** (e driver SQLite/MySQL).
+* Ou softwares externos como **MySQL Workbench**, **DBeaver** ou **DB Fiddle** (online).
+
+### 2. Ordem de Execução
+1.  ▶️ **`01_create_tables.sql`**
+    * Execute este script primeiro. Ele cria a estrutura das tabelas (`FABRICANTE`, `TIPO_CARRO`, `MODELO`) e define as regras de chaves (PK e FK).
+2.  ▶️ **`02_insert_data.sql`**
+    * Insere a massa de dados inicial.
+    * *Importante:* Deve ser rodado após a criação das tabelas para validar os vínculos.
+3.  ▶️ **`03_queries.sql`**
+    * Contém as consultas de teste (SELECTs com JOIN, Group By, etc) para validar se os relatórios estão corretos.
+4.  ▶️ **`04_update_delete.sql`**
+    * Execute por último para testar a modificação e exclusão de dados e verificar como o banco reage às restrições de segurança.
+
 ## 💻 Tecnologias Utilizadas
 
 * **SQL (ANSI Standard)**: A linguagem universal de dados! 💾
