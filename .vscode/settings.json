@@ -1,0 +1,11 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "AutoClass",
+      "database": "${workspaceFolder:Modelagem_de_Banco_de_Dados}/autoclass.db"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}
