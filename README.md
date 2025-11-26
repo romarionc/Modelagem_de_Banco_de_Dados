@@ -7,7 +7,7 @@
 
 > Projeto de modelagem e implementação de um banco de dados relacional para catalogação de veículos, focado em **Normalização (3FN)**, integridade de dados e consultas estratégicas.
 
-🔗 **[Acesse o repositório completo aqui!](https://github.com/romarionc/AutoClass-Database)**
+🔗 **[Acesse o repositório completo aqui!](https://github.com/romarionc/Modelagem_de_Banco_de_Dados)**
 
 ## 🎯 Objetivo
 
